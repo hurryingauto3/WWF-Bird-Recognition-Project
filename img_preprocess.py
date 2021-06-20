@@ -42,8 +42,5 @@ class ImageLoader(Dataset):
 
     
 
-imgldr = ImageLoader(trainData, transform)
-dtaldr = DataLoader(imgldr, batch_size=10, shuffle=True)
-data = iter(dtaldr)
-d = next(data)
+
  
