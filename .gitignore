@@ -1,3 +1,9 @@
+#Additonal
+
+.vscode/
+Image_Scraping/
+
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]

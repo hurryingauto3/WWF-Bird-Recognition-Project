@@ -1,0 +1,9 @@
+os
+torch
+torchvision
+pandas
+numpy
+matplotlib.pyplot
+sklearn
+cv2
+cvlib
