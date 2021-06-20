@@ -1,26 +1,14 @@
 #Dataset_imports
-from torch.utils.data.dataloader import DataLoader
-import bird_Model_init as bm
+import img_dir as id
 
 # IMPORTS
-import os
-import time
-import copy
-import math
-import torch
-import torchvision
-import numpy as np
-import torch.nn as nn
-import torch.optim as optim
-import matplotlib.pyplot as plt
-from torch.optim import lr_scheduler
-from torchvision import datasets, models, transforms
+from torchvision import  transforms
 from torchvision.datasets import ImageFolder
 from sklearn.model_selection import train_test_split
-from torch.utils.data import Dataset
+from torch.utils.data import Dataset, DataLoader
 from PIL import Image
 
-dataset = ImageFolder(bm.PICTURE_DIR)
+dataset = ImageFolder(id.PICTURE_DIR)
 trainData, testData, trainLabel, testLabel = train_test_split(dataset.imgs, dataset.targets, test_size=0.2, random_state=0)
 transform = transforms.Compose(
     [
@@ -29,10 +17,6 @@ transform = transforms.Compose(
         transforms.Normalize([0.5]*3, [0.5]*3)
     ]
 )
-# print(trainData)
-# print(testData)
-# print(trainLabel)
-# print(testLabel)
 
 class ImageLoader(Dataset):
     def __init__(self, dataset, transform = None):
