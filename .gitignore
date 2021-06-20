@@ -2,7 +2,7 @@
 
 .vscode/
 Image_Scraping/
-
+bird_Model_init.py
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
