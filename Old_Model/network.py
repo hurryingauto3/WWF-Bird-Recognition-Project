@@ -1,5 +1,5 @@
 from torch.nn import Module, Conv2d, Linear, MaxPool2d, AdaptiveAvgPool2d
-from torch.nn.functional import relu, dropout
+from torch.nn.functional import relu, dropout, softmax
 from img_preprocess import *
 class Network(Module):
     def __init__(self):
@@ -12,8 +12,8 @@ class Network(Module):
         self.adPooling = AdaptiveAvgPool2d(256)
 
         self.fc1 = Linear(in_features=256, out_features=128)
-        self.fc1 = Linear(in_features=128, out_features=64)
-        self.fc1 = Linear(in_features=64, out_features=2)
+        self.fc2 = Linear(in_features=128, out_features=64)
+        self.out = Linear(in_features=64, out_features=2)
 
     def forward(self, x):
         x = self.conv1(x)
@@ -38,7 +38,7 @@ class Network(Module):
         x = self.fc2(x)
         x = relu(x)
 
-        return self.out(x)
+        return softmax(self.out(x))
 
 
 imgldr = ImageLoader(trainData, transform)
