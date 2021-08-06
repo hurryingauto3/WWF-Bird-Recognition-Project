@@ -1,7 +1,7 @@
 \documentclass{article}
 \usepackage{hyperref}
 \usepackage{graphicx}
-
+\usepackage{subfigure}
 
 \title{Khidmat Bird Recogntion Project\\ \textit{Intemediate Progress Report}}
 \author{Ali Hamza}
@@ -42,16 +42,30 @@
     All images collected: \url{https://drive.google.com/drive/folders/18k-roE_VJSB1dcrhvN1y_EosVF7Kb0dY?usp=sharing}
     \subsection*{Image Preprocessing}
     The images were preprocessed using the following steps:
-    % \begin{enumerate}
-        % \item Resize
-        % \item Gaussian Blur
-        % \item Canny Edge Detection
-        % \item Adaptive Thresholding
-        % \item Region of Interest
-        % \item Color Filtering
-        % \item Histogram Equalization
-    % \end{enumerate}
+    \begin{enumerate}
+        \item \texttt{Find Box} Function \newline 
+        Each image was taken an a Computer Vision tool was used to find a box that contains a bird-like object within it. This function would then detect all edges of the bounding-box the bird-like object has been detected to be inside. This ensure the final image only contains the bird itself.
+        \item \texttt{Crop Image} Function  \newline
+        Each image was then taken and cropped into a square as this would standardize each image that will be fed into the neural net. We cropped images to sizes: $50\times 50$, $100\times 100$, and $244\times 244$ as seen below.
+    \end{enumerate}
 
+    \begin{figure}[t]
+        \centering
+        \subfigure[text]{
+        \includegraphics[width=.225\textwidth]{pictures/CM1.jpg}
+        }
+        \subfigure[text]{
+        \includegraphics[width=.225\textwidth]{pictures/HC4.jpg}
+        }
+        
+        \subfigure[text]{
+        \includegraphics[width=.225\textwidth]{pictures/HS2.jpg}
+        }
+
+        \caption{blablabla}
+        \label{fig:1}
+        \end{figure}
+        
     \subsection*{Feature Extraction}
     The following features were extracted from the images:
     % \begin{enumerate}
