@@ -2,7 +2,7 @@
 \usepackage{hyperref}
 \usepackage{graphicx}
 \usepackage{subfigure}
-\usepackage[a4paper, total={6in, 8in}]{geometry}
+\usepackage[a4paper, total={6in, 10in}]{geometry}
 \title{Khidmat Bird Recogntion Project\\ \textit{Intemediate Progress Report}}
 \author{Ali Hamza $\&$ Usaid Rahman}
 \date{\today}
@@ -18,13 +18,12 @@
     The following steps were initially established in order to achieve this objective:
     
     \begin{enumerate}
-        \item Image collection
-        \item Image preprocessing
-        \item Feature extraction
+        \item Image Collection
+        \item Image Prepossessing
+        \item Feature Extraction
         \item Training
         \item Testing
         \item Results
-        \item Conclusion
     \end{enumerate}
 
     \subsection*{Image Collection}
@@ -64,7 +63,7 @@
         \item Further fine-tuning of Parameters
     \end{enumerate}
     The final model will be trained on the entire dataset and tested again. We further plan to createt a detailed report at the end of this project for WWF, Pakistan detailing each component of the machine learning pipe line. The report will serve as a record of the work done, and a manual for the future developers to follow.
-    
+    \newpage
     \section*{Figures and Images}
         \begin{figure}[h!]
         \centering
@@ -80,7 +79,30 @@
         \caption{Preprocessed Bird Images}
         \label{Birds}
     \end{figure}
-   
+    
+    \begin{figure}[h!]
+        \centering
+        \subfigure{
+        \includegraphics[scale = 0.5]{Report/pictures/loss.png}
+        }
+        \subfigure{
+        \includegraphics[scale = 0.5]{Report/pictures/accuracy.png}
+        }
+        \caption{Loss and Accuracy Plots with Normal Neural Net}
+        \label{lna1}
+    \end{figure}
+    
+    \begin{figure}[h!]
+        \centering
+        \subfigure{
+        \includegraphics[scale = 0.5]{Report/pictures/loss1.png}
+        }
+        \subfigure{
+        \includegraphics[scale = 0.5]{Report/pictures/accuracy1.png}
+        }
+        \caption{Loss and Accuracy Plots with Residual Neural Net}
+        \label{lna2}
+    \end{figure}
         
         
 \end{document}
