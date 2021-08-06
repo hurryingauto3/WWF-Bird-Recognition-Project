@@ -2,7 +2,7 @@
 \usepackage{hyperref}
 \usepackage{graphicx}
 \usepackage{subfigure}
-
+\usepackage[a4paper, total={6in, 8in}]{geometry}
 \title{Khidmat Bird Recogntion Project\\ \textit{Intemediate Progress Report}}
 \author{Ali Hamza}
 \date{\today}
@@ -46,26 +46,10 @@
         \item \texttt{Find Box} Function \newline 
         Each image was taken an a Computer Vision tool was used to find a box that contains a bird-like object within it. This function would then detect all edges of the bounding-box the bird-like object has been detected to be inside. This ensure the final image only contains the bird itself.
         \item \texttt{Crop Image} Function  \newline
-        Each image was then taken and cropped into a square as this would standardize each image that will be fed into the neural net. We cropped images to sizes: $50\times 50$, $100\times 100$, and $244\times 244$ as seen below.
+        Each image was then taken and cropped into a square as this would standardize each image that will be fed into the neural net. We cropped images to sizes: $50\times 50$, $100\times 100$, and $200\times 200$ as seen in \ref{Birds}
     \end{enumerate}
 
-    \begin{figure}[t]
-        \centering
-        \subfigure[text]{
-        \includegraphics[width=.225\textwidth]{pictures/CM1.jpg}
-        }
-        \subfigure[text]{
-        \includegraphics[width=.225\textwidth]{pictures/HC4.jpg}
-        }
-        
-        \subfigure[text]{
-        \includegraphics[width=.225\textwidth]{pictures/HS2.jpg}
-        }
 
-        \caption{blablabla}
-        \label{fig:1}
-        \end{figure}
-        
     \subsection*{Feature Extraction}
     The following features were extracted from the images:
     % \begin{enumerate}
@@ -87,7 +71,8 @@
     The following algorithm was used to test the model:
     
     \subsection*{Conclusion}
-    The following algorithm was used to test the model:
+    
+    This pipeline with certain configuration yielded a detection accuracy of 87$\%$
 
 
     \section*{Remaining Work}
@@ -101,8 +86,25 @@
     The final model will be trained on the entire dataset and tested again. We further plan to createt a detailed report at the end of this project for WWF, Pakistan detailing each component of the machine learning pipe line. The report will serve as a record of the work done, and a manual for the future developers to follow.
     
     \section*{Addendum}
-    \section*{Code}
+    \subsection*{Code}
     \subsection*{Results}
-
+    \subsection*{Figures and Images}
+        \begin{figure}[h!]
+        \centering
+        \subfigure[$50\times 50$]{
+        \includegraphics[]{pictures/CM1.jpg}
+        }
+        \subfigure[$100\times 100$]{
+        \includegraphics[]{pictures/HC4.jpg}
+        }
+        \subfigure[$200\times 200$ ]{
+        \includegraphics[]{pictures/HS2.jpg}
+        }
+        \caption{Preprocessed Bird Images}
+        \label{Birds}
+    \end{figure}
+   
+        
+        
 \end{document}
 
