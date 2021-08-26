@@ -1,20 +1,17 @@
 \documentclass{article}
-
-\usepackage{geometry}
 \usepackage{hyperref}
-
-\title {\Huge Khidmat Report\\
+\hypersetup{colorlinks=true, linkcolor=blue, urlcolor=blue}
+\usepackage{geometry}
+\setlength{\parindent}{0pt}
+\title{\Huge Khidmat Report\\
 \textit{WWF Bird Recognition Model}}
-
-\author{
-  Student 1: Ali Hamza\\ ah05084
+\author{Student 1: Ali Hamza\\ ah05084
   \and
   Student 2: Ali Haider\\ xy09876
   \and
   Student 3: Usaid Rehman\\ xy09876
 }
 \date{\today}  
-
 \begin{document}
 \maketitle
 \newpage
@@ -25,6 +22,10 @@
 \subsection{Project Description}
 % An introduction of the project, no more than 2 sentences. Provide the highest level of detail only. Other details will come later.
 % Typically, "This project is to <short description of porject> for/at <client>."
+This project is aimed at creating and deploying a deep learning pipeline for WWF Pakistan to classify images of 
+three different species of birds -- namely: common myna, house crow, and the house sparrow. This project 
+would serve as a proof-of-concept for a larger model that WWF can use to classify a larger number of birds 
+using a mobile application.
 
 \subsection{About WWF}
 % About the client.
@@ -212,9 +213,40 @@ The total time spent on the Khidmat this week is as follows.
 \newpage
 \section{Conclusion}
 \newpage
-\section{Addendum}
+
+\section{Technical Overview}
 \subsection{Resources}
+  The resources that we used for this project can be categorized into two main 
+  categories: images, and technologies. Our first step was to acquire a set of images that would 
+  function as our dataset. We collected around 550 images for each of the three 
+  species of birds --- the house crow, common myna, and the house sparrow. We used 
+  several different websites and online databases to find these images, we list 
+  these websites below: 
+  \begin{enumerate}
+    \item \url{https://search.macaulaylibrary.org/catalog?taxonCode=myna&mediaType=p&q=Common\%20Myna}
+    \item \url{https://ebird.org/media/catalog?taxonCode=commyn&mediaType=p&sort=rating_rank_desc&q=Common\%20Myna\%20-\%20Acridotheres\%20tristis}
+    \item \url{https://ebird.org/media/catalog?taxonCode=houcro1&sort=rating_rank_desc&mediaType=p&regionCode=}
+        \item \url{https://search.macaulaylibrary.org/catalog?taxonCode=houcro1&mediaType=p&region=Pakistan\%20(PK)&regionCode=PK&q=House\%20Crow\%20-\%20Corvus\%20splendens}
+        \item \url{https://www.kaggle.com/gpiosenka/100-bird-species}
+        \item \url{https://search.macaulaylibrary.org/catalog?taxonCode=houspa&mediaType=p&q=House\%20Sparrow}
+          \item \url{https://ebird.org/media/catalog?taxonCode=houspa&mediaType=p&sort=rating_rank_desc&q=House\%20Sparrow\%20-\%20Passer\%20domesticus}
+  \end{enumerate}
+  \setlength{\parskip}{1em}
+  All collected images can be viewed at \url{https://drive.google.com/drive/folders/18k-roE_VJSB1dcrhvN1y_EosVF7Kb0dY?usp=sharing}.
+
+  To preprocess our images, convert them into a usable dataset, and to create our deep learning model, we had to
+  rely on several different preexisting tools. 
+
 \subsection{Overview of CS Techniques Used}
+  This project was an amalgamation of several different aspects of computer science techniques.
+  The process can be summarized into main steps:
+  \begin{enumerate}
+    \item Data Collection
+    \item Image Preprocessing 
+    \item Construction of Neural Network 
+    \item Testing and Optimization
+  \end{enumerate}
+  
 \subsection{Codebase and Documentation}
 \newpage
 \thispagestyle{empty}
@@ -241,7 +273,7 @@ I hereby certify that I supervised XXX and XXX for the Khidmat described in this
 \bigskip
 
 \noindent\begin{tabular}{@{}p{.6\textwidth}@{\hspace{.1\textwidth}}p{.3\textwidth}}
-  \hrulefill &   \hrulefill \\
+  \hrulefill \&   \hrulefill\\
   Name and signature & Location and date
 \end{tabular}
 
