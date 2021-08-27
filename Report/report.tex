@@ -1,4 +1,5 @@
 \documentclass{article}
+\usepackage{xurl}
 \usepackage{hyperref}
 \hypersetup{colorlinks=true, linkcolor=blue, urlcolor=blue}
 \usepackage{geometry}
@@ -20,6 +21,7 @@
 \section{Introduction}
 % Use first person plural (we, us) even if you did the Khidmat individually.
 \subsection{Project Description}
+\setlength{\parindent}{3em}
 % An introduction of the project, no more than 2 sentences. Provide the highest level of detail only. Other details will come later.
 % Typically, "This project is to <short description of porject> for/at <client>."
 This project is aimed at creating and deploying a deep learning pipeline for WWF Pakistan to classify images of 
@@ -234,24 +236,55 @@ The total time spent on the Khidmat this week is as follows.
   \setlength{\parskip}{1em}
   All collected images can be viewed at \url{https://drive.google.com/drive/folders/18k-roE_VJSB1dcrhvN1y_EosVF7Kb0dY?usp=sharing}.
 
-  To preprocess our images, convert them into a usable dataset, and to create our deep learning model, we had to
-  rely on several different preexisting tools. 
-
+  To preprocess our images, convert them into a usable dataset, and to create
+  our deep learning model, we had to rely on several different preexisting tools.
+  We list the tools that we used in this project below:
+  \setlength{\parskip}{0em}
+  \begin{itemize}
+    \item \texttt{Python} --- The primary programming language that we used for this project.
+      Most of the other tools that we used are different libraries \& modules for in Python.
+    \item \texttt{OpenCV} --- A computer vision module in Python to preprocess the images. 
+    \item \texttt{TensorFlow \& Keras} --- A Python library that we used to construct, and then 
+      ttrain and test our neural network. 
+    \item \texttt{Matplotlib} --- A plotting library for Python, which we used to visualize our
+    \item \texttt{Sci-kit learn} --- A Python library for machine learning that we used to 
+      construct our training and testing set. 
+    \item \texttt{Google Colab} --- We used Colab notebooks to write code and then run code
+      using GPU-accelerated computation that is made available using Google Colaboratory.
+  \end{itemize}
+ 
 \subsection{Overview of CS Techniques Used}
   This project was an amalgamation of several different aspects of computer science techniques.
-  The process can be summarized into main steps:
+  The process can be summarized into 5 main steps:
   \begin{enumerate}
-    \item Data Collection
+    \item Image Collection
     \item Image Preprocessing 
     \item Construction of Neural Network 
+    \item Training the Neural Network
     \item Testing and Optimization
   \end{enumerate}
   
-\subsection{Codebase and Documentation}
+  We briefly expand upon these steps in the following sections. For a more technical 
+  description, please view the documentation (LINK HERE). 
+
+  \subsubsection{Image Collection}
+   
+  \subsubsection{Image Preprocessing}
+  
+  \subsubsection{Neural Network Construction}
+  
+  \subsubsection{Training the Neural Network}
+
+  \subsubsection{Testing and Optimization}
+
+\newpage
+\appendix
+\section{Source Code}
 \newpage
 \thispagestyle{empty}
 % Show your external supervisor your report, especially the weekly upates; have them sign a printed copy of this page; scan the signed page; and include the scanned page in this document as an image.
-
+\section{Documentation}
+\newpage
 \begin{center}
   {\Large\bf Khidmat Completion Form}\\[5pt]
   \small To be completed by the external supervisor.  
