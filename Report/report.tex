@@ -29,8 +29,34 @@ three different species of birds -- namely: common myna, house crow, and the hou
 would serve as a proof-of-concept for a larger model that WWF can use to classify a larger number of birds 
 using a mobile application.
 
-\subsection{About WWF}
-% About the client.
+\subsection{About WWF Pakistan}
+The World Wildlife Fund for Nature (WWF) is an international non-governmental organization
+founded in 1961 that primarily works in the areas of wildlife conservation and preservation.
+WWF also works in the domains of food security, renewable energy, ocean and forest preservation, 
+and many others\footnote{\url{https://wwf.panda.org/}}.
+
+WWF Pakistan is the Pakistan chapter of the World Wildlife Fund, working on similar problems as 
+WWF International but in a more local context. WWF has more than five regional offices 
+throughout the country, and has conducted several successful 
+projects pertaining to freshwater conservation, water security, forests, climate change and others.
+What they are most known for, however, is wildlife conservation --- the area that we 
+have assisted WWF in.
+
+\subsection{Project Background \& Context}
+Keeping track of biodiversity is a challenge in Pakistan due to a lack of resources, personnel 
+and governmental support. Pakistan has a plethora of wildlife and a rich and diverse ecosystem. 
+WWF Pakistan has helped in the conservation of several endangered species such as the 
+Indus River Dolphin and the Snow Leopard --- both of which are now experiencing a rise in numbers. 
+
+However, wildlife preservation and protection extends beyond just the conservation of 
+endangered species. Maintaining biodiversity is extremely important for 
+wildlife protection and to maintain a healhty ecosystem and environment. Unfortunately, 
+a lack of biodiversity is a major crisis that is unfolding across the globe. In order to 
+combat this, it is imperative that researches have updated data about species populations, 
+habitats, interactions etc. 
+
+An important 
+
 \subsection{Work Plan}
 % About the plan of work.
 \newpage % Start the report for each week on a new page.
@@ -228,10 +254,11 @@ The total time spent on the Khidmat this week is as follows.
     \item \url{https://search.macaulaylibrary.org/catalog?taxonCode=myna&mediaType=p&q=Common\%20Myna}
     \item \url{https://ebird.org/media/catalog?taxonCode=commyn&mediaType=p&sort=rating_rank_desc&q=Common\%20Myna\%20-\%20Acridotheres\%20tristis}
     \item \url{https://ebird.org/media/catalog?taxonCode=houcro1&sort=rating_rank_desc&mediaType=p&regionCode=}
-        \item \url{https://search.macaulaylibrary.org/catalog?taxonCode=houcro1&mediaType=p&region=Pakistan\%20(PK)&regionCode=PK&q=House\%20Crow\%20-\%20Corvus\%20splendens}
-        \item \url{https://www.kaggle.com/gpiosenka/100-bird-species}
-        \item \url{https://search.macaulaylibrary.org/catalog?taxonCode=houspa&mediaType=p&q=House\%20Sparrow}
-          \item \url{https://ebird.org/media/catalog?taxonCode=houspa&mediaType=p&sort=rating_rank_desc&q=House\%20Sparrow\%20-\%20Passer\%20domesticus}
+    \item \url{https://search.macaulaylibrary.org/catalog?taxonCode=houcro1&mediaType=p&region=Pakistan\%20(PK)&regionCode=PK&q=House\%20Crow\%20-\%20Corvus\%20splendens}
+    \item \url{https://www.kaggle.com/gpiosenka/100-bird-species}
+    \item \url{https://search.macaulaylibrary.org/catalog?taxonCode=houspa&mediaType=p&q=House\%20Sparrow}
+    \item \url{https://ebird.org/media/catalog?taxonCode=houspa&mediaType=p&sort=rating_rank_desc&q=House\%20Sparrow\%20-\%20Passer\%20domesticus}
+    \label{imagelinks}
   \end{enumerate}
   \setlength{\parskip}{1em}
   All collected images can be viewed at \url{https://drive.google.com/drive/folders/18k-roE_VJSB1dcrhvN1y_EosVF7Kb0dY?usp=sharing}.
@@ -268,8 +295,17 @@ The total time spent on the Khidmat this week is as follows.
   description, please view the documentation (LINK HERE). 
 
   \subsubsection{Image Collection}
-   
+  We used the sources listed at~\ref{imagelinks} to collect images of the three species of birds.
+  We downloaded approximately 650 images for each birds, which we then filtered
+  down to around 550 to maintain uniform image quality. Based on our results, we believe
+  the number of images that we have, i.e. the size of our dataset is adequate. 
+  
   \subsubsection{Image Preprocessing}
+  The next step was to pre-process these images to convert them into a
+  usable dataset. 
+
+  % TODO: - write this part: make it slightly detailed but easy to understand 
+  %       - include technical details in addendum
   
   \subsubsection{Neural Network Construction}
   
@@ -277,11 +313,8 @@ The total time spent on the Khidmat this week is as follows.
 
   \subsubsection{Testing and Optimization}
 
-\newpage
 \appendix
 \section{Source Code}
-\newpage
-\thispagestyle{empty}
 % Show your external supervisor your report, especially the weekly upates; have them sign a printed copy of this page; scan the signed page; and include the scanned page in this document as an image.
 \section{Documentation}
 \newpage
