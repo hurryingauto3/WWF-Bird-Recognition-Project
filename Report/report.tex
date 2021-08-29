@@ -1,18 +1,18 @@
 \documentclass{article}
 \usepackage{xurl}
 \usepackage{hyperref}
-\hypersetup{colorlinks=false, linkcolor=blue, urlcolor=blue}
+\hypersetup{colorlinks=true, linkcolor=blue, urlcolor=blue}
 \usepackage{geometry}
 \setlength{\parindent}{0pt}
 \title{\Huge Khidmat Report\\
 \textit{WWF Bird Recognition Model}}
 \author{Ali Hamza\\ ah05084
   \and
-  Ali Haider\\ xy09876
+  Ali Haider Rizvi\\ xy09876
   \and
-  M. Usaid Rehman\\ mr04302 
+  M. Usaid Rehman\\ mr04302
 }
-\date{\today}  
+\date{}  
 \begin{document}
 \maketitle
 \newpage
@@ -25,7 +25,7 @@
 % An introduction of the project, no more than 2 sentences. Provide the highest level of detail only. Other details will come later.
 % Typically, "This project is to <short description of porject> for/at <client>."
 This project is aimed at creating and deploying a deep learning pipeline for WWF Pakistan to classify images of 
-three different species of birds; namely: common myna, house crow, and the house sparrow. This project 
+three different species of birds -- namely: common myna, house crow, and the house sparrow. This project 
 would serve as a proof-of-concept for a larger model that WWF can use to classify a larger number of birds 
 using a mobile application.
 
@@ -77,7 +77,6 @@ The development of a larger deep learning model and an application is
 beyond the scope of our \textit{Khidmat} due to time restraints. 
 We have succesfully implemented a computer vision pipeline for preprocessing 
 and a deep neural network for classification for three species of birds.
-
 \subsection{Work Plan}
 % About the plan of work.
 \newpage % Start the report for each week on a new page.
@@ -329,11 +328,32 @@ The total time spent on the Khidmat this week is as follows.
   %       - include technical details in addendum
   
   \subsubsection{Neural Network Construction}
+  Artificial neural networks form the basis for solving most artificial intelligence 
+  problems. Image classification is one such problem. Neural networks represent connections 
+  between artificial neurons, also called units. These connections are represented as weights 
+  in the neural network. These weights are also called parameters and 
+  learned by the neural network during supervised learning.
+
+  There are several types of neural networks that are optimal for solving different 
+  intelligence problems. Image recognition/classification has been solved using 
+  several types of neural networks since the 1980s such as multilayer perceptrons. 
+  A newer method to solve image classification problems (and problems generally 
+  pertaining to computer vision) is the Convolutional Neural Network (CNN). 
+  
+  Unlike other neural networks, a CNN takes spatial information about the input image 
+  into consideration during learning, allowing it to generally be more accurate. Therefore, 
+  we decided to implement a CNN for this project. We first implemented a simplistic 
+  CNN using two-dimensional convolutional layers that preexist in TensorFlow. However, 
+  we found that our results were not satisfactory. 
+
+  We then opted to implement the Residual Neural Network (ResNet), which is built
+  upon the same idea as CNNs but significantly improves accuracy and performance. 
   
   \subsubsection{Training the Neural Network}
 
   \subsubsection{Testing and Optimization}
 
+  \subsection{Results}
 \newpage
 \appendix
 \section{Source Code}
