@@ -1,16 +1,16 @@
 \documentclass{article}
 \usepackage{xurl}
 \usepackage{hyperref}
-\hypersetup{colorlinks=true, linkcolor=blue, urlcolor=blue}
+\hypersetup{colorlinks=false, linkcolor=blue, urlcolor=blue}
 \usepackage{geometry}
 \setlength{\parindent}{0pt}
 \title{\Huge Khidmat Report\\
 \textit{WWF Bird Recognition Model}}
-\author{Student 1: Ali Hamza\\ ah05084
+\author{Ali Hamza\\ ah05084
   \and
-  Student 2: Ali Haider\\ xy09876
+  Ali Haider\\ xy09876
   \and
-  Student 3: Usaid Rehman\\ xy09876
+  M. Usaid Rehman\\ mr04302 
 }
 \date{\today}  
 \begin{document}
@@ -25,7 +25,7 @@
 % An introduction of the project, no more than 2 sentences. Provide the highest level of detail only. Other details will come later.
 % Typically, "This project is to <short description of porject> for/at <client>."
 This project is aimed at creating and deploying a deep learning pipeline for WWF Pakistan to classify images of 
-three different species of birds -- namely: common myna, house crow, and the house sparrow. This project 
+three different species of birds; namely: common myna, house crow, and the house sparrow. This project 
 would serve as a proof-of-concept for a larger model that WWF can use to classify a larger number of birds 
 using a mobile application.
 
@@ -55,7 +55,28 @@ a lack of biodiversity is a major crisis that is unfolding across the globe. In 
 combat this, it is imperative that researches have updated data about species populations, 
 habitats, interactions etc. 
 
-An important 
+An important group of animals that contribute to biodiversity are birds. Therefore, 
+it is vital that data pertaining to bird population is collected in Pakistan. 
+To assist in this endeavor, WWF aims to enlist the help of citizen scientists who could 
+help identify and locate birds and consequently update WWF's database. 
+
+Our project aims to implement a deep learning pipeline that would 
+classify images of three different species of birds --- house crow, common 
+myna, and the house sparrow. The pipeline would take an image, preprocess it 
+to a form that the model can work with, and then classify it using a deep 
+neural network --- telling us what species the bird in the image belongs to. 
+
+This pipeline serves as a proof-of-concept for a larger model that 
+would be classifying hundreds of species of birds. This model will fit 
+into a planned mobile application that citizen scientists can use to spot birds 
+and then capture their image. Not only will the application classify the 
+species of the bird but it will also update WWF's database, giving them 
+access to more data about bird populations and their locations. 
+
+The development of a larger deep learning model and an application is 
+beyond the scope of our \textit{Khidmat} due to time restraints. 
+We have succesfully implemented a computer vision pipeline for preprocessing 
+and a deep neural network for classification for three species of birds.
 
 \subsection{Work Plan}
 % About the plan of work.
@@ -313,9 +334,11 @@ The total time spent on the Khidmat this week is as follows.
 
   \subsubsection{Testing and Optimization}
 
+\newpage
 \appendix
 \section{Source Code}
 % Show your external supervisor your report, especially the weekly upates; have them sign a printed copy of this page; scan the signed page; and include the scanned page in this document as an image.
+\newpage
 \section{Documentation}
 \newpage
 \begin{center}
