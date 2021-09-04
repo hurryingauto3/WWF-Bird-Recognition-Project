@@ -77,6 +77,7 @@ The development of a larger deep learning model and an application is
 beyond the scope of our \textit{Khidmat} due to time restraints. 
 We have succesfully implemented a computer vision pipeline for preprocessing 
 and a deep neural network for classification for three species of birds.
+
 \subsection{Work Plan}
 % About the plan of work.
 \newpage % Start the report for each week on a new page.
@@ -344,21 +345,49 @@ The total time spent on the Khidmat this week is as follows.
   into consideration during learning, allowing it to generally be more accurate. Therefore, 
   we decided to implement a CNN for this project. We first implemented a simplistic 
   CNN using two-dimensional convolutional layers that preexist in TensorFlow. However, 
-  we found that our results were not satisfactory. 
+  we found that our results were not as satisfactory as we hoped for them to be.
 
   We then opted to implement the Residual Neural Network (ResNet), which is built
   upon the same idea as CNNs but significantly improves accuracy and performance. 
+  ResNet utilize skip connections or shortcuts between layers. Specifically, we leveraged 
+  TensorFlow's built-in ResNet50 implementation, a variant of ResNet that utilizes 
+  48 convolutional layers, a MaxPool layer and an Average Pool layer. 
+
+  After using ResNet50, we use the output of the last AvgPool layer and flatten the output.
+  Then we use two flattened fully-connected layers and an output layer to give us our final 
+  output. In total, our neural network contained 24,715,779 trainable parameters and 
+  53,120 non-trainable parameters. 
+  For more technical information on the neural network construction, please see <LINK>.
+  
   
   \subsubsection{Training the Neural Network}
+  To train neural networks, there are several different methods that optimize 
+  the cost function. The most famous of these is the stochastic gradient descent (SGD). 
+  SGD is a stochastic approximation of the simpler gradient descent optimization. Gradient 
+  descent approximates the gradient for the entire training set at each iteration. However, 
+  stochastic gradient descent approximates the gradient for one example in the training set 
+  per iteration --- making it much faster. 
 
+  A newer method called minibatch stochastic gradient finds the middle ground between 
+  gradient descent and SGD. It approximates the gradient in each iteration using a randomly 
+  selected minibatch of training examples. These minibatches are also effective for 
+  parellel computation using GPUs. 
+
+  We used the Adaptive Moment Estimation or \textit{Adam} optimization algorithm. Adam is an 
+  effective algorithm for problems with sparse gradients such as computer vision problems. 
+  This optimization algorithm relies on three hyperparameters: $\alpha, \beta_1, \beta_2 $, and $\epsilon$.
+  Adam is very effective in optimizing problems that contains a large number 
+  of trainable parameters. The value we set for $\alpha$ was 0.001 and the $\beta$ values 
+  were set as default, i.e. 0.9 and 0.999. 
+     
+   
+  
   \subsubsection{Testing and Optimization}
 
   \subsection{Results}
 \newpage
 \appendix
-\section{Source Code}
 % Show your external supervisor your report, especially the weekly upates; have them sign a printed copy of this page; scan the signed page; and include the scanned page in this document as an image.
-\newpage
 \section{Documentation}
 \newpage
 \begin{center}
@@ -367,7 +396,10 @@ The total time spent on the Khidmat this week is as follows.
 \end{center}
 \bigskip
 
-\noindent{\it Please use the space below to provide any comments you may have on the students' performance, the Khidmat program, or any other feedback you want to share with Habib University's Khidmat committee. We can also be reached at \href{mailto:khidmat@sse.habib.edu.pk}{khidmat@sse.habib.edu.pk}.}
+\noindent{\it Please use the space below to provide any comments you may have on the students' 
+performance, the Khidmat program, or any other feedback you want to share with Habib 
+University's Khidmat committee. We can also be reached 
+at \href{mailto:khidmat@sse.habib.edu.pk}{khidmat@sse.habib.edu.pk}.}
 \vfill
 
 \begin{center}
@@ -377,7 +409,9 @@ The total time spent on the Khidmat this week is as follows.
 
 % Insert your name below.
 
-I hereby certify that I supervised XXX and XXX for the Khidmat described in this report. Furthermore, that I have read and agree with the weekly updates included in this report. My signature below marks the successful completion of the work undertaken for the Khidmat.\\
+I hereby certify that I supervised XXX and XXX for the Khidmat described in this report. 
+Furthermore, that I have read and agree with the weekly updates included in this report.
+My signature below marks the successful completion of the work undertaken for the Khidmat.\\
 \bigskip
 \bigskip
 
