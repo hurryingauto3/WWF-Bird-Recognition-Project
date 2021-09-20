@@ -1,4 +1,12 @@
 # def load_dataset(size):
+def unzip(zipfile):
+    with ZipFile(zipfile, 'r') as zip:
+
+    zip.printdir()
+    zip.extractall()
+    print('Done!')
+
+
 def load_dataset():
   # if size == 100:
 
@@ -42,7 +50,7 @@ def load_dataset():
 
 def read_images(dataset):
     images = []
-    
+
     for filepath in dataset:
         images.append(cv2.imread(filepath))
 

@@ -1,5 +1,6 @@
 import dependencies
 
+unzip("test.zip")
 dataset, labels = load_dataset()
 dataset = read_images(dataset)
 X_train, X_test, y_train, y_test = trainer(dataset, labels, 0.3, 42)
@@ -17,8 +18,10 @@ cnn_1.summary()
 # cnn_2.summary()
 
 #CNN training
-cnn1_history = cnn_1.fit(X_train, y_train, epochs=30, batch_size=32, validation_data=(X_test, y_test))
-# cnn2_history = cnn_2.fit(X_train, y_train, epochs=30, batch_size=32, validation_data=(X_test, y_test))
+cnn1_history = cnn_1.fit(X_train, y_train, epochs=30,
+                        batch_size=32, validation_data=(X_test, y_test))
+# cnn2_history = cnn_2.fit(X_train, y_train, epochs=30,
+                            #`batch_size=32, validation_data=(X_test, y_test))
 
 #CNN Results
 loss_plot(cnn1_history)
@@ -33,7 +36,8 @@ resnet.compile(optimizer = optimizers.Adam(0.001),
 
 resnet.summary()
 
-resnet_history = resnet.fit(X_train, y_train, epochs=10, batch_size=64, validation_data=(X_test, y_test))
+resnet_history = resnet.fit(X_train, y_train, epochs=10,
+                            batch_size=64, validation_data=(X_test, y_test))
 
 #ResNet Results
 
