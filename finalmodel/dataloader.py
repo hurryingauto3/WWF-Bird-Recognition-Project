@@ -1,10 +1,9 @@
 # def load_dataset(size):
 def unzip(zipfile):
     with ZipFile(zipfile, 'r') as zip:
-
-    zip.printdir()
-    zip.extractall()
-    print('Done!')
+        zip.printdir()
+        zip.extractall()
+        print('Done!')
 
 
 def load_dataset():
