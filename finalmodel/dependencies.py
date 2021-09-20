@@ -11,3 +11,5 @@ from dataloader import load_dataset, read_images
 from model_1 import cnn_1
 from model_2 import cnn_2
 from trainer import trainer
+from plotter import loss_plot, accuracy_plot
+from resnet import resnet
