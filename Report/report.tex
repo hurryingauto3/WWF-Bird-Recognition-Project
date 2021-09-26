@@ -1,20 +1,37 @@
 \documentclass[11pt]{article}
 \usepackage{xurl}
 \usepackage{hyperref}
+\usepackage{graphicx}
 \hypersetup{colorlinks=true, linkcolor=blue, urlcolor=blue}
 \usepackage{geometry}
+% \usepackage{caption}
+% \usepackage{subcaption}
+\usepackage{subfig}
 \setlength{\parindent}{0pt}
+
 \title{\Huge Khidmat Report\\
 \textit{WWF Bird Recognition Model}}
 \author{Ali Hamza\\ ah05084
   \and
-  Ali Haider Rizvi\\ xy09876
+  Ali Haider Rizvi\\ ah05199
   \and
   M. Usaid Rehman\\ mr04302
 }
 \date{}  
 \begin{document}
 \maketitle
+\begin{center}
+    
+\begin{figure}[h!]
+    \centering
+    \subfloat{{\includegraphics[width=7cm]{Report/pictures/Hulogo.png} }}%
+    \qquad
+    \subfloat{{\includegraphics[width=5cm]{Report/pictures/wwflogo.png} }}%
+   % \caption{2 Figures side by side}%
+    \label{fig:example}%
+\end{figure}
+\end{center}
+
 \newpage
 \tableofcontents
 \newpage
@@ -79,7 +96,31 @@ We have succesfully implemented a computer vision pipeline for preprocessing
 and a deep neural network for classification for three species of birds.
 
 \subsection{Work Plan}
-% About the plan of work.
+\subsubsection{Project Description}
+To create an algorithm that distinguishes between 3 birds that will act as the first stage in developing a larger ML model for the WWF app for recognizing birds.
+\subsubsection{Expected Deliverables}
+\
+\begin{enumerate}
+    \item Dataset on all 3 birds (Common Myna, Housecrow, Sparrow) 
+    \item Machine Learning Model (Python Notebook)
+    \item Validation and Training of Model
+    \item Demonstration of Final Model 
+    \item Report on Model, including Code, Explanations, and Documentation.
+\end{enumerate}
+
+\subsubsection{Planned Schedule}
+
+\begin{itemize}
+    \item [-] June Week 1: Images, Image Metadata, Relevance, Summary statistics, Scraped from Facebook, Instagram, Twitter, Datasets
+    \item [-] June Week 2: Labelled data for training and testing. [Data in the proper format, ready to be used for the model]    
+    \item [-] July Week 2: Prototype ML Model
+    \item [-] July Week 3: Test run for the model using training data
+    \item [-] July Week 4: Validation of model
+    \item [-] August Week 1: Final training of reworked model 
+    \item [-] August Week 2: Final Validation of reworked model
+    \item [-] Sept Week 2: Demonstration of Model
+    \item [-] Sept Week 4: Final Report and Delivery
+\end{itemize}
 \newpage % Start the report for each week on a new page.
 
 % Copy-paste this section with necessary modifcations for each week.
@@ -90,19 +131,29 @@ and a deep neural network for classification for three species of birds.
 \begin{tabular}{|l|l|l|l|}
   \hline
   \textbf{Item} 	& \textbf{Activity} & \textbf{Time} & \textbf{ID} \\\hline
-  
+  1 & Scraped images for house sparrow & 2 & 05084 \\ \hline
+  2 & Scraped images for house sparrow & 3 & 05084\\ \hline
+  3 & Meeting with WWF & 1 & 05084\\ \hline
+  4 & Scraped images for house crow & 2 & 05199\\ \hline
+  5 & Scraped images for house crow & 1 & 05199\\ \hline
+  6 & Scraped images for house sparrow & 2 & 05199\\ \hline
+  7 & Meeting with WWF & 1 & 05084\\ \hline
+  8 & Scraped Common Myna Pictures & 2 & 04302\\ \hline
+  9 & Scraped Common Myna Pictures & 2 & 04302\\ \hline
+  10 & Scraped Common Myna Pictures & 3 & 04302\\ \hline
+  11 & Meeting with WWF & 1 & 05084 \\ \hline
 \end{tabular}
     
 \end{center}
 The total time spent on the Khidmat this week is as follows.    
 \begin{center}
     
-\begin{tabular}{|l|l|}
+\begin{tabular}{|l|c|}
   \hline
   \textbf{ID} & \textbf{Total Hours}\\\hline
-  st1 & \\\hline
-  st2 & \\\hline
-  st3 & \\\hline
+  ah05084 & 6 \\\hline
+  ah05199 & 6 \\\hline
+  mr04302 & 8 \\\hline
 \end{tabular}
 \end{center}
 \newpage
@@ -112,41 +163,56 @@ The total time spent on the Khidmat this week is as follows.
 \begin{tabular}{|l|l|l|l|}
   \hline
   \textbf{Item} 	& \textbf{Activity} & \textbf{Time} & \textbf{ID} \\\hline
-  
+  1 & Analyzed the compiled dataset & 2.5 & 050584 \\ \hline
+  2 & Wrote code for image preprocesing & 5 & 05084 \\ \hline
+  3 & Internal Meeting & 1 & 05084 \\ \hline
+  4 & Resized Images & 2.5 & 05199  \\ \hline
+  5 & Coded Initial Model & 3.5 & 05199 \\ \hline 
+  6 & Training and Tuning & 3.5 & 05199 \\ \hline
+  7 & Internal Meeting & 1 & 05199 \\ \hline
+  8 & Research Neural Nets & 1.5 & 04302 \\ \hline
+  9 & Coded Initial Model & 3.5 & 04302 \\ \hline
+  10 & Researched Optimization Methods & 1.5 & 04302 \\ \hline
+  11 & Internal Meeting & 1 & 04302 \\ \hline
 \end{tabular}
     
 \end{center}
 The total time spent on the Khidmat this week is as follows.    
+
 \begin{center}
-    
-\begin{tabular}{|l|l|}
+\begin{tabular}{|l|c|}
   \hline
   \textbf{ID} & \textbf{Total Hours}\\\hline
-  st1 & \\\hline
-  st2 & \\\hline
-  st3 & \\\hline
+  ah05084 & 8.5 \\\hline
+  ah05199 & 10 \\\hline
+  mr04302 & 7.5 \\\hline
 \end{tabular}
 \end{center}
-\newpage
+
 \subsection{\texttt{Week 3: }}
 %Short Weekly Summary
 \begin{center}
 \begin{tabular}{|l|l|l|l|}
   \hline
   \textbf{Item} 	& \textbf{Activity} & \textbf{Time} & \textbf{ID} \\\hline
-  
+  1 & Worked on Model & 2 & ah05084 \\ \hline
+  2 & Training and tuning & 2 & ah05084 \\ \hline
+  3 & Worked on Report & 2 & ah05084 \\ \hline
+  4 & Explored ResNet for better performance & 3 & ah05199 \\ \hline
+  5 & Worked on Model & 2 & mr04302 \\ \hline
+  6 & Training and tuning & 2 & mr04302 \\ \hline
 \end{tabular}
     
 \end{center}
 The total time spent on the Khidmat this week is as follows.    
+
 \begin{center}
-    
-\begin{tabular}{|l|l|}
+\begin{tabular}{|l|c|}
   \hline
   \textbf{ID} & \textbf{Total Hours}\\\hline
-  st1 & \\\hline
-  st2 & \\\hline
-  st3 & \\\hline
+  ah05084 & 6 \\\hline
+  ah05199 & 3 \\\hline
+  mr04302 & 4 \\\hline
 \end{tabular}
 \end{center}
 \newpage
@@ -157,18 +223,20 @@ The total time spent on the Khidmat this week is as follows.
   \hline
   \textbf{Item} 	& \textbf{Activity} & \textbf{Time} & \textbf{ID} \\\hline
   
+  1 & Shifted training to TPUs for faster training & 2.5 & 05199 \\ \hline
+  2 & Training and Tuning & 11.5 & 05199 \\ \hline
+  3 & Confusion Matrix/ Precision Recall & 1.5 & 05199 \\ \hline
 \end{tabular}
     
 \end{center}
 The total time spent on the Khidmat this week is as follows.    
 \begin{center}
-    
-\begin{tabular}{|l|l|}
+\begin{tabular}{|l|c|}
   \hline
   \textbf{ID} & \textbf{Total Hours}\\\hline
-  st1 & \\\hline
-  st2 & \\\hline
-  st3 & \\\hline
+  ah05084 & 0 \\\hline
+  ah05199 & 15.5 \\\hline
+  mr04302 & 0 \\\hline
 \end{tabular}
 \end{center}
 \newpage
@@ -178,41 +246,49 @@ The total time spent on the Khidmat this week is as follows.
 \begin{tabular}{|l|l|l|l|}
   \hline
   \textbf{Item} 	& \textbf{Activity} & \textbf{Time} & \textbf{ID} \\\hline
-  
+    1 & Scraped 40-50 images for all birds & 3 & 05084 \\ \hline
+    2 & Worked on Intermediate Report & 3 & 05084 \\ \hline
+    3 & Code Refactoring + Misc Google Colab work & 4 & 05084 \\ \hline
+    4 & Worked on Neural Net + Github Syncing & 2.5 & 05084 \\ \hline
+    5 & Worked on Intermediate Report & 3 & 04302 \\ \hline
 \end{tabular}
     
 \end{center}
 The total time spent on the Khidmat this week is as follows.    
 \begin{center}
-    
-\begin{tabular}{|l|l|}
+\begin{tabular}{|l|c|}
   \hline
   \textbf{ID} & \textbf{Total Hours}\\\hline
-  st1 & \\\hline
-  st2 & \\\hline
-  st3 & \\\hline
+  ah05084 & 12.5 \\\hline
+  ah05199 & 0 \\\hline
+  mr04302 & 3 \\\hline
 \end{tabular}
 \end{center}
 \newpage
+
 \subsection{\texttt{Week 6: }}
 %Short Weekly Summary
 \begin{center}
 \begin{tabular}{|l|l|l|l|}
   \hline
   \textbf{Item} 	& \textbf{Activity} & \textbf{Time} & \textbf{ID} \\\hline
+  1 & Training and Testing & 4 & 05084  \\ \hline
+  2 & Worked on Intermediate Report & 2 & 05084 \\ \hline
+  3 & Meeting with Dr. Sarah & 1 & 05084 \\ \hline
+  4 & Meeting with Dr. Sarah & 1 & 04302 \\ \hline
   
 \end{tabular}
     
 \end{center}
+
 The total time spent on the Khidmat this week is as follows.    
 \begin{center}
-    
-\begin{tabular}{|l|l|}
+\begin{tabular}{|l|c|}
   \hline
   \textbf{ID} & \textbf{Total Hours}\\\hline
-  st1 & \\\hline
-  st2 & \\\hline
-  st3 & \\\hline
+  ah05084 & 7 \\\hline
+  ah05199 & 0 \\\hline
+  mr04302 & 1 \\\hline
 \end{tabular}
 \end{center}
 \newpage
@@ -222,19 +298,19 @@ The total time spent on the Khidmat this week is as follows.
 \begin{tabular}{|l|l|l|l|}
   \hline
   \textbf{Item} 	& \textbf{Activity} & \textbf{Time} & \textbf{ID} \\\hline
-  
+  1 & Cleaned Code & 2 & 05084 \\ \hline
+  2 & Turned Notebook into Python Modules & 3 & 05084 \\ \hline
 \end{tabular}
     
 \end{center}
 The total time spent on the Khidmat this week is as follows.    
 \begin{center}
-    
-\begin{tabular}{|l|l|}
+\begin{tabular}{|l|c|}
   \hline
   \textbf{ID} & \textbf{Total Hours}\\\hline
-  st1 & \\\hline
-  st2 & \\\hline
-  st3 & \\\hline
+  ah05084 & 5 \\\hline
+  ah05199 & 0 \\\hline
+  mr04302 & 0 \\\hline
 \end{tabular}
 \end{center}
 \newpage
@@ -244,19 +320,19 @@ The total time spent on the Khidmat this week is as follows.
 \begin{tabular}{|l|l|l|l|}
   \hline
   \textbf{Item} 	& \textbf{Activity} & \textbf{Time} & \textbf{ID} \\\hline
+  1 & Worked on Final Report & 8 & 05084 \\ \hline
   
 \end{tabular}
     
 \end{center}
 The total time spent on the Khidmat this week is as follows.    
 \begin{center}
-    
-\begin{tabular}{|l|l|}
+\begin{tabular}{|l|c|}
   \hline
   \textbf{ID} & \textbf{Total Hours}\\\hline
-  st1 & \\\hline
-  st2 & \\\hline
-  st3 & \\\hline
+  ah05084 & 8 \\\hline
+  ah05199 & 0 \\\hline
+  mr04302 & 0 \\\hline
 \end{tabular}
 \end{center}
 \newpage
@@ -385,10 +461,27 @@ The total time spent on the Khidmat this week is as follows.
   \subsubsection{Testing \& Fine-Tuning}
 
   \subsection{Results}
+ \begin{center}
+      \begin{figure}[h!]
+    \centering
+    \subfloat{{\includegraphics[width=5cm]{Report/pictures/Acc_finalmodel.png}}}%
+    \qquad
+    \subfloat{{\includegraphics[width=5cm]{Report/pictures/loss_finalmodel.png} }}%
+   % \caption{2 Figures side by side}%
+    \label{fig:example}%
+\end{figure}
+\end{center}
 \newpage
 \appendix
 % Show your external supervisor your report, especially the weekly upates; have them sign a printed copy of this page; scan the signed page; and include the scanned page in this document as an image.
 \section{Documentation}
+\begin{itemize}
+  \item \texttt{load$\_$dataset(size)}
+  This function has been designed to take in the size of the images being used for training, each image being a square. The function will then return a list of images, and labels for training. The dataset variable returns a list of paths for the images, and a the labels variable returns list of labels for those images.
+  \item \texttt{read$\_$image(dataset)}
+  \item This takes the dataset variable as an argument and returns a list of images that have been turned where each image is represented by a list of RGB values for each pixel in the image.
+  \item \texttt{create$\_$model()}
+\end{itemize}
 \newpage
 \begin{center}
   {\Large\bf Khidmat Completion Form}\\[5pt]
@@ -420,4 +513,4 @@ My signature below marks the successful completion of the work undertaken for th
   Name and signature & Location and date
 \end{tabular}
 
-\end{document}
+\medskip\end{document}
