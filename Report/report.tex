@@ -1,4 +1,4 @@
-\documentclass{article}
+\documentclass[11pt]{article}
 \usepackage{xurl}
 \usepackage{hyperref}
 \hypersetup{colorlinks=true, linkcolor=blue, urlcolor=blue}
@@ -347,16 +347,16 @@ The total time spent on the Khidmat this week is as follows.
   CNN using two-dimensional convolutional layers that preexist in TensorFlow. However, 
   we found that our results were not as satisfactory as we hoped for them to be.
 
-  We then opted to implement the Residual Neural Network (ResNet), which is built
+  We then tried implementing the Residual Neural Network (ResNet), which is built
   upon the same idea as CNNs but significantly improves accuracy and performance. 
   ResNet utilize skip connections or shortcuts between layers. Specifically, we leveraged 
   TensorFlow's built-in ResNet50 implementation, a variant of ResNet that utilizes 
-  48 convolutional layers, a MaxPool layer and an Average Pool layer. 
+  48 convolutional layers, a MaxPool layer and an Average Pool layer. However, since 
+  ResNet50 is a fairly deep architecture which is more useful when implementing models 
+  for data sets that are quite large, with at least several thousand examples.
 
-  After using ResNet50, we use the output of the last AvgPool layer and flatten the output.
-  Then we use two flattened fully-connected layers and an output layer to give us our final 
-  output. In total, our neural network contained 24,715,779 trainable parameters and 
-  53,120 non-trainable parameters. 
+  Therefore, we resorted to the CNN once again since it was more suited to 
+  our data set.
   For more technical information on the neural network construction, please see <LINK>.
   
   
@@ -371,7 +371,7 @@ The total time spent on the Khidmat this week is as follows.
   A newer method called minibatch stochastic gradient finds the middle ground between 
   gradient descent and SGD. It approximates the gradient in each iteration using a randomly 
   selected minibatch of training examples. These minibatches are also effective for 
-  parellel computation using GPUs. 
+  parellel computation using TPUs. 
 
   We used the Adaptive Moment Estimation or \textit{Adam} optimization algorithm. Adam is an 
   effective algorithm for problems with sparse gradients such as computer vision problems. 
