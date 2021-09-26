@@ -1,10 +1,14 @@
 \documentclass{article}
 \usepackage{xurl}
 \usepackage{hyperref}
-\usepackage{graphics}
+\usepackage{graphicx}
 \hypersetup{colorlinks=true, linkcolor=blue, urlcolor=blue}
 \usepackage{geometry}
+% \usepackage{caption}
+% \usepackage{subcaption}
+\usepackage{subfig}
 \setlength{\parindent}{0pt}
+
 \title{\Huge Khidmat Report\\
 \textit{WWF Bird Recognition Model}}
 \author{Ali Hamza\\ ah05084
@@ -16,12 +20,18 @@
 \date{}  
 \begin{document}
 \maketitle
+\begin{center}
+    
 \begin{figure}[h!]
     \centering
-    \includegraphics{Report/pictures/Hulogo.png}
-    \caption{Caption}
-    \label{fig:my_label}
+    \subfloat{{\includegraphics[width=7cm]{Report/pictures/Hulogo.png} }}%
+    \qquad
+    \subfloat{{\includegraphics[width=5cm]{Report/pictures/wwflogo.png} }}%
+   % \caption{2 Figures side by side}%
+    \label{fig:example}%
 \end{figure}
+\end{center}
+
 \newpage
 \tableofcontents
 \newpage
@@ -86,7 +96,31 @@ We have succesfully implemented a computer vision pipeline for preprocessing
 and a deep neural network for classification for three species of birds.
 
 \subsection{Work Plan}
-% About the plan of work.
+\subsubsection{Project Description}
+To create an algorithm that distinguishes between 3 birds that will act as the first stage in developing a larger ML model for the WWF app for recognizing birds.
+\subsubsection{Expected Deliverables}
+\
+\begin{enumerate}
+    \item Dataset on all 3 birds (Common Myna, Housecrow, Sparrow) 
+    \item Machine Learning Model (Python Notebook)
+    \item Validation and Training of Model
+    \item Demonstration of Final Model 
+    \item Report on Model, including Code, Explanations, and Documentation.
+\end{enumerate}
+
+\subsubsection{Planned Schedule}
+
+\begin{itemize}
+    \item [-] June Week 1: Images, Image Metadata, Relevance, Summary statistics, Scraped from Facebook, Instagram, Twitter, Datasets
+    \item [-] June Week 2: Labelled data for training and testing. [Data in the proper format, ready to be used for the model]    
+    \item [-] July Week 2: Prototype ML Model
+    \item [-] July Week 3: Test run for the model using training data
+    \item [-] July Week 4: Validation of model
+    \item [-] August Week 1: Final training of reworked model 
+    \item [-] August Week 2: Final Validation of reworked model
+    \item [-] Sept Week 2: Demonstration of Model
+    \item [-] Sept Week 4: Final Report and Delivery
+\end{itemize}
 \newpage % Start the report for each week on a new page.
 
 % Copy-paste this section with necessary modifcations for each week.
@@ -122,7 +156,7 @@ The total time spent on the Khidmat this week is as follows.
   mr04302 & 8 \\\hline
 \end{tabular}
 \end{center}
-
+\newpage
 \subsection{\texttt{Week 2: }}
 %Short Weekly Summary
 \begin{center}
@@ -181,7 +215,7 @@ The total time spent on the Khidmat this week is as follows.
   mr04302 & 4 \\\hline
 \end{tabular}
 \end{center}
-
+\newpage
 \subsection{\texttt{Week 4: }}
 %Short Weekly Summary
 \begin{center}
@@ -205,7 +239,7 @@ The total time spent on the Khidmat this week is as follows.
   mr04302 & 0 \\\hline
 \end{tabular}
 \end{center}
-
+\newpage
 \subsection{\texttt{Week 5: }}
 %Short Weekly Summar
 \begin{center}
@@ -230,7 +264,7 @@ The total time spent on the Khidmat this week is as follows.
   mr04302 & 3 \\\hline
 \end{tabular}
 \end{center}
-
+\newpage
 
 \subsection{\texttt{Week 6: }}
 %Short Weekly Summary
@@ -257,53 +291,53 @@ The total time spent on the Khidmat this week is as follows.
   mr04302 & 1 \\\hline
 \end{tabular}
 \end{center}
-
+\newpage
 \subsection{\texttt{Week 7: }}
 %Short Weekly Summary
 \begin{center}
 \begin{tabular}{|l|l|l|l|}
   \hline
   \textbf{Item} 	& \textbf{Activity} & \textbf{Time} & \textbf{ID} \\\hline
-  
+  1 & Cleaned Code & 2 & 05084 \\ \hline
+  2 & Turned Notebook into Python Modules & 3 & 05084 \\ \hline
 \end{tabular}
     
 \end{center}
 The total time spent on the Khidmat this week is as follows.    
 \begin{center}
-    
-\begin{tabular}{|l|l|}
+\begin{tabular}{|l|c|}
   \hline
   \textbf{ID} & \textbf{Total Hours}\\\hline
-  st1 & \\\hline
-  st2 & \\\hline
-  st3 & \\\hline
+  ah05084 & 5 \\\hline
+  ah05199 & 0 \\\hline
+  mr04302 & 0 \\\hline
 \end{tabular}
 \end{center}
-
+\newpage
 \subsection{\texttt{Week 8: }}
 %Short Weekly Summary
 \begin{center}
 \begin{tabular}{|l|l|l|l|}
   \hline
   \textbf{Item} 	& \textbf{Activity} & \textbf{Time} & \textbf{ID} \\\hline
+  1 & Worked on Final Report & 8 & 05084 \\ \hline
   
 \end{tabular}
     
 \end{center}
 The total time spent on the Khidmat this week is as follows.    
 \begin{center}
-    
-\begin{tabular}{|l|l|}
+\begin{tabular}{|l|c|}
   \hline
   \textbf{ID} & \textbf{Total Hours}\\\hline
-  st1 & \\\hline
-  st2 & \\\hline
-  st3 & \\\hline
+  ah05084 & 8 \\\hline
+  ah05199 & 0 \\\hline
+  mr04302 & 0 \\\hline
 \end{tabular}
 \end{center}
-
+\newpage
 \section{Conclusion}
-
+\newpage
 
 \section{Technical Overview}
 \subsection{Resources}
@@ -427,6 +461,16 @@ The total time spent on the Khidmat this week is as follows.
   \subsubsection{Testing and Optimization}
 
   \subsection{Results}
+ \begin{center}
+      \begin{figure}[h!]
+    \centering
+    \subfloat{{\includegraphics[width=5cm]{Report/pictures/Acc_finalmodel.png}}}%
+    \qquad
+    \subfloat{{\includegraphics[width=5cm]{Report/pictures/loss_finalmodel.png} }}%
+   % \caption{2 Figures side by side}%
+    \label{fig:example}%
+\end{figure}
+\end{center}
 \newpage
 \appendix
 % Show your external supervisor your report, especially the weekly upates; have them sign a printed copy of this page; scan the signed page; and include the scanned page in this document as an image.
@@ -469,4 +513,4 @@ My signature below marks the successful completion of the work undertaken for th
   Name and signature & Location and date
 \end{tabular}
 
-\end{document}
+\medskip\end{document}
