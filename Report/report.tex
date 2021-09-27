@@ -11,8 +11,9 @@
 \setlength{\parindent}{0pt}
 
 \title{\Huge Khidmat Report\\
-\textit{WWF Bird Recognition Model}}
-\author{Ali Hamza\\ ah05084
+\textit{\huge A Deep Learning Model 
+to Identifying Bird Species from Images}}
+\author{\Large Ali Hamza\\ ah05084
   \and
   Ali Haider Rizvi\\ ah05199
   \and
@@ -22,13 +23,19 @@
 \begin{document}
 \maketitle
 \begin{center}
+    {\huge Organization: World Wildlife Fund Pakistan}
+    \begin{figure}[h!]
+    \centering
+    \includegraphics[width=5cm]{./pictures/wwflogo.png}%
+   % \caption{2 Figures side by side}%
+    \label{fig:example}%
+\end{figure}
+\end{center}
+\begin{center}
     
 \begin{figure}[h!]
     \centering
-    \subfloat{{\includegraphics[width=7cm]{./pictures/Hulogo.png} }}%
-    \qquad
-    \subfloat{{\includegraphics[width=5cm]{./pictures/wwflogo.png} }}%
-   % \caption{2 Figures side by side}%
+    \includegraphics[width=5cm]{./pictures/Hulogo.png}
     \label{fig:example}%
 \end{figure}
 \end{center}
@@ -323,7 +330,7 @@ The total time spent on the Khidmat this week is as follows.
   \hline
   \textbf{Item} 	& \textbf{Activity} & \textbf{Time} & \textbf{ID} \\\hline
   1 & Worked on Final Report & 8 & 05084 \\ \hline
-  2 & Worked on Final Report & 6.5 & 05084 \\ \hline
+  2 & Worked on Final Report & 6.5 & 04302 \\ \hline
   
 \end{tabular}
     
@@ -359,8 +366,12 @@ The total time spent on the Khidmat this week is as follows.
     \label{imagelinks}
   \end{enumerate}
   \setlength{\parskip}{1em}
-  All collected images can be viewed \hyperlink{https://drive.google.com/drive/folders/18k-roE_VJSB1dcrhvN1y_EosVF7Kb0dY?usp=sharing}{here}.\\
-  % The entire code produced for this Khidmat can be found \hyperref{https://colab.research.google.com/drive/1JJ1Pc9Ml8jjFJ8AuQKMOMJHt5urKrog5?usp=sharing}[here]. It is recommended that the code be tested and run in a Google Colab environment due to the use of TPUs that allow for the neural net to train at quite a high speed. 
+  \noindent All items produced during this Khidmat can be found here: \url{https://drive.google.com/drive/folders/1jGJuFPEnX3sYZSnK-uAY0uFQmqXfPbMt?usp=sharing}. This link includes the Google Colab notebook, all images collected, datasets developed, and the final report
+  
+  \noindent The entire code produced for this Khidmat can be found here: \url{https://drive.google.com/file/d/1tyvXu43z1UZdEPKRSyFogyMqaGNBvc5N/view?usp=sharing}. 
+  
+  
+  \noindent It is recommended that the code be tested and run in a Google Colab environment due to the use of TPUs that allow for the neural net to train at quite a high speed. 
   To preprocess our images, convert them into a usable dataset, and to create
   our deep learning model, we had to rely on several different preexisting tools.
   We list the tools that we used in this project below:
@@ -492,7 +503,6 @@ The total time spent on the Khidmat this week is as follows.
     13 & 134 & 6 \\
     14 & 14 & 128
  \end{bmatrix}\]
- \vspace{-2 em}
  \begin{center}
       \begin{figure}[h!]
     \centering
@@ -503,11 +513,12 @@ The total time spent on the Khidmat this week is as follows.
    \label{fig:results}
 \end{figure}
 \end{center}
-\vspace{-2 em}
 Lastly, we also calculated the accuracy, precision, recall, and F1 scores. Our accuracy score was almost
 0.8222, precision was 0.84209, recall was 0.842039, and F1 score was 0.8417. Therefore, 
 considering the small data set, our model did do reasonably well in terms of performance.
 
+\newpage
+\vspace{5 em}
 \section{Conclusion}%
 \label{sec:conclusion}
 Our \textit{Khidmat} Project is the starting step for a larger model that should be able 
