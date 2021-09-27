@@ -337,8 +337,6 @@ The total time spent on the Khidmat this week is as follows.
 \end{tabular}
 \end{center}
 \newpage
-\section{Conclusion}
-\newpage
 
 \section{Technical Overview}
 \subsection{Resources}
@@ -400,7 +398,16 @@ The total time spent on the Khidmat this week is as follows.
   
   \subsubsection{Image Preprocessing}
   The next step was to pre-process these images to convert them into a
-  usable dataset. 
+  usable dataset. The first step is to create bounding boxes surrounding the birds within the images.
+  Since we need images of equal dimensions, i.e. a square, we pad the images in order 
+  to convert it into a square.
+
+  Then we can scale the image up or down in order to convert it into a specific dimensions. 
+  For example, an image of dimension $500 \times 500$ can be scaled down to an 
+  image of dimension $50 \times 50$. Examples of this can be seen in Figure~\ref{fig:birds}.
+  Our entire data set consists of $50 \times 50$ images, numbering around 550 images per bird.
+  Most of the inner working of image preprocessing is handled by the OpenCV Python library.
+  
 
  \begin{center}
     \begin{figure}[h!]
@@ -411,7 +418,7 @@ The total time spent on the Khidmat this week is as follows.
     \qquad
     \subfloat{{\includegraphics[width=0.25\textwidth]{./pictures/HS2.jpg} }}%
 
-   \caption{Pictures of birds from the data set after preprocesing.}%
+   \caption{Pictures of birds from the data set after preprocessing.}%
    \label{fig:birds}
     \end{figure}
   \end{center}
