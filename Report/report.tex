@@ -1,6 +1,7 @@
 \documentclass[11pt]{article}
 \usepackage{xurl}
 \usepackage{hyperref}
+\usepackage{amsmath}
 \usepackage{graphicx}
 \hypersetup{colorlinks=true, linkcolor=blue, urlcolor=blue}
 \usepackage{geometry}
@@ -24,9 +25,9 @@
     
 \begin{figure}[h!]
     \centering
-    \subfloat{{\includegraphics[width=7cm]{Report/pictures/Hulogo.png} }}%
+    \subfloat{{\includegraphics[width=7cm]{./pictures/Hulogo.png} }}%
     \qquad
-    \subfloat{{\includegraphics[width=5cm]{Report/pictures/wwflogo.png} }}%
+    \subfloat{{\includegraphics[width=5cm]{./pictures/wwflogo.png} }}%
    % \caption{2 Figures side by side}%
     \label{fig:example}%
 \end{figure}
@@ -401,9 +402,20 @@ The total time spent on the Khidmat this week is as follows.
   The next step was to pre-process these images to convert them into a
   usable dataset. 
 
-  % TODO: - write this part: make it slightly detailed but easy to understand 
-  %       - include technical details in addendum
-  
+ \begin{center}
+    \begin{figure}[h!]
+    \centering
+    \subfloat{{\includegraphics[width=0.25\textwidth]{./pictures/CM1.jpg}}}%
+    \qquad
+    \subfloat{{\includegraphics[width=0.25\textwidth]{./pictures/HC4.jpg} }}%
+    \qquad
+    \subfloat{{\includegraphics[width=0.25\textwidth]{./pictures/HS2.jpg} }}%
+
+   \caption{Pictures of birds from the data set after preprocesing.}%
+   \label{fig:birds}
+    \end{figure}
+  \end{center}
+
   \subsubsection{Neural Network Construction}
   Artificial neural networks form the basis for solving most artificial intelligence 
   problems. Image classification is one such problem. Neural networks represent connections 
@@ -435,7 +447,6 @@ The total time spent on the Khidmat this week is as follows.
   our data set.
   For more technical information on the neural network construction, please see <LINK>.
   
-  
   \subsubsection{Training the Neural Network}
   To train neural networks, there are several different methods that optimize 
   the cost function. The most famous of these is the stochastic gradient descent (SGD). 
@@ -457,20 +468,54 @@ The total time spent on the Khidmat this week is as follows.
   were set as default, i.e. 0.9 and 0.999. The loss function for our model was 
   the cross-entropy loss function which is quite popular in image classification tasks.
    
-  
-  \subsubsection{Testing \& Fine-Tuning}
-
   \subsection{Results}
+  To train our neural network, we ran the optimization algorithm on it for 
+  110 epochs, and we kept the minibatch size as 64, in order to not overburden the TPU.
+  At the end of training, our accuracy reached approximately 86\% and our loss value 
+  was reduced to almost 0.67 as shown in Figure~\ref{fig:results}.
+
+  Other than just the accuracy and loss metrics, we used the confusion matrix to 
+  analyze the performance of our model. The confusion matrix is a standard for
+  judging the performance of a model in a classification problem. Our confusion 
+  matrix looked like this:
+  \[\begin{bmatrix}
+    117 & 15 & 9 \\
+    13 & 134 & 6 \\
+    14 & 14 & 128
+ \end{bmatrix}\]
+ \vspace{-2 em}
  \begin{center}
       \begin{figure}[h!]
     \centering
-    \subfloat{{\includegraphics[width=5cm]{Report/pictures/Acc_finalmodel.png}}}%
+    \subfloat{{\includegraphics[width=0.45\textwidth]{./pictures/Acc_finalmodel.png}}}%
     \qquad
-    \subfloat{{\includegraphics[width=5cm]{Report/pictures/loss_finalmodel.png} }}%
-   % \caption{2 Figures side by side}%
-    \label{fig:example}%
+    \subfloat{{\includegraphics[width=0.45\textwidth]{./pictures/loss_finalmodel.png} }}%
+   \caption{Plots for the accuracy and loss resulting from training the CNN.}%
+   \label{fig:results}
 \end{figure}
 \end{center}
+\vspace{-2 em}
+Lastly, we also calculated the accuracy, precision, recall, and F1 scores. Our accuracy score was almost
+0.8222, precision was 0.84209, recall was 0.842039, and F1 score was 0.8417. Therefore, 
+considering the small data set, our model did do reasonably well in terms of performance.
+
+\section{Conclusion}%
+\label{sec:conclusion}
+Our \textit{Khidmat} Project is the starting step for a larger model that should be able 
+to identify many more species of birds commonly found in Pakistan. This will clearly make
+the data set much larger. One of the primary challenges we faced was that our data set was fairly
+small. An improvement that we would suggest would be to use a much larger data set. This data 
+set can be accumulated using web scraping. Ideally, there should be several thousand 
+images for each birds. Not only does this have the potential of improving accuracy but it also 
+allows for better, more complex architectures to be used such as DenseNet and ResNet.
+We would also recommend tweaking the existing model more and adjusting hyperparameters in 
+order to find a better configuration that optimizes the model the most.
+
+This project was a great learning experience for us and we are thankful to WWF Pakistan, 
+especially Mr. Jamshed Iqbal for letting us be a part of the great work that WWF Pakistan does 
+for animal conservation. We are also thankful to our internal supervisor, Dr. Sarah Hasnain, 
+for letting us know of this opportunity and for supporting us throughout the project.
+
 \newpage
 \appendix
 % Show your external supervisor your report, especially the weekly upates; have them sign a printed copy of this page; scan the signed page; and include the scanned page in this document as an image.
